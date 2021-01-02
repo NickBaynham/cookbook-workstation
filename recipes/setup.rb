@@ -2,6 +2,7 @@ package 'tree' do
 	action :install
 end
 
+package 'ntp'
 package 'git'
 
 file '/etc/motd' do
