@@ -6,7 +6,12 @@ package 'ntp'
 package 'git'
 
 file '/etc/motd' do
-	content 'This server is the property of Scott Steele'
+	content "This server is the property of Nick Baynham
+	HOSTNAME: #{node['hostname']}
+	IPADDRESS: #{node['ipaddress']}
+	Memory: #{node['memory']['total']}
+	CPU: #{node['cpu']['0']['mhz']}
+	"
         action :create
 	owner 'root'
 	group 'root'
